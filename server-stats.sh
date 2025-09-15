@@ -31,4 +31,13 @@ ps -eo pid,comm,%mem --sort=-%mem | head -n 6
 # Uptime
 echo -e "\nUPTIME:"
 uptime -p
+
+# Logged In Users
+echo -e "\nLOGGED IN USERS:"
+who
+
+# Failed Login Attempts
+echo -e "\nFAILED LOGIN ATTEMPTS:"
+sudo lastb | head -n 5
+
 echo -e "\n=================================="
