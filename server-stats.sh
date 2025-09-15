@@ -27,4 +27,8 @@ ps -eo pid,comm,%cpu --sort=-%cpu | head -n 6
 # Top 5 Memory consuming processes
 echo -e "\nTOP 5 PROCESSES BY MEMORY:"
 ps -eo pid,comm,%mem --sort=-%mem | head -n 6
+
+# Uptime
+echo -e "\nUPTIME:"
+uptime -p
 echo -e "\n=================================="
