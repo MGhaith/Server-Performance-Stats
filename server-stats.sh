@@ -23,3 +23,8 @@ df -h | awk '$NF=="/"{printf "Used: %d, Free: %d, Use%%: %s\n", $3, $4, $5}'
 # Top 5 CPU consuming processes
 echo -e "\nTOP 5 PROCESSES BY CPU:"
 ps -eo pid,comm,%cpu --sort=-%cpu | head -n 6
+
+# Top 5 Memory consuming processes
+echo -e "\nTOP 5 PROCESSES BY MEMORY:"
+ps -eo pid,comm,%mem --sort=-%mem | head -n 6
+echo -e "\n=================================="
