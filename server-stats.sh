@@ -15,3 +15,7 @@ free -m | awk 'NR==2{printf "Used: %s MB (%.2f%%), Free: %s MB\n", $3, $3*100/$2
 # Disk Usage
 echo -e "\n*DISK USAGE*"
 df -h | awk '$NF=="/"{printf "Used: %d, Free: %d, Use%%: %s\n", $3, $4, $5}'
+
+# Top 5 CPU consuming processes
+echo -e "\nTOP 5 PROCESSES BY CPU:"
+ps -eo pid,comm,%cpu --sort=-%cpu | head -n 6
