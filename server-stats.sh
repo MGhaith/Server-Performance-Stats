@@ -4,6 +4,10 @@ echo "=================================="
 echo "      SERVER PERFORMANCE STATS    "
 echo "=================================="
 
+# OS Version
+echo -e "\nOS VERSION:"
+cat /etc/os-release | grep PRETTY_NAME
+
 # CPU Usage
 echo -e "\n*CPU Usage*"
 top -bn1 | grep "Cpu(s)" | awk '{print "CPU Usage: " $2 + $4 "%"}'
